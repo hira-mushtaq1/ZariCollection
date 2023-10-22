@@ -19,3 +19,18 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+//  function subscribe() {
+//    // Get the email input field value
+//    var name = document.getElementById("name").value
+//    var email = document.getElementById("email").value;
+
+//    // You can add validation here to check the email format, etc.
+
+//    // For this example, we'll simply display an alert with the entered email.
+//    alert("Subscribed with email: " + email);
+
+//    // Clear the email input field
+//    document.getElementById("email").value = "";
+//    document.getElementById("name").value = "";
+//  }

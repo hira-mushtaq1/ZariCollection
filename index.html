@@ -332,7 +332,7 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"> <img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
@@ -341,11 +341,10 @@
 								<div class="col-auto">
 									<input type="email" class="form-control" placeholder="Enter your email">
 								</div>
-								<div class="col-auto">
-									<button class="btn btn-primary">
-										<span class="fa fa-paper-plane"></span>
-									</button>
-								</div>
+								  <div class="col-auto">
+                            <a class="btn btn-primary text-white me-2 " href="https://wa.me/+923135075598">Whatsapp</a>
+                        </div>
+								
 							</form>
 
 						</div>
@@ -424,6 +423,33 @@
 
 			</div>
 		</footer>
+
+
+ <script>
+        $(".subscription-form").submit(function(e) {
+            e.preventDefault();
+            var email = $("input[name='email']").val();
+            
+            // Use Sheetsu API to send data to Google Sheets
+            $.ajax({
+                url: "https://sheetsu.com/apis/YOUR_API_ENDPOINT",
+                data: { email: email },
+                type: "POST",
+                success: function() {
+                    alert("Subscription successful!");
+                    $("input[name='email']").val("");
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
 		<!-- End Footer Section -->	
 		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	
